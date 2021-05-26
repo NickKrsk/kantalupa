@@ -8,6 +8,7 @@ const routes = [
       { path: 'register', component: () => import('pages/Register.vue') },
       { path: 'corps', component: () => import('pages/Corps.vue') },
       { path: 'startups', component: () => import('pages/Startups.vue') },
+      { path: 'addStartup', component: () => import('pages/StartupCard.vue') },
     ],
   },
 

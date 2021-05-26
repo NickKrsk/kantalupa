@@ -163,7 +163,7 @@ export default {
   methods: {   
     addIdea() {
       console.log('add idea');
-      this.$router.push({ path: '/login' });
+      this.$router.push({ path: '/addStartup' });
     },
 
     selectCorp(corp) {
