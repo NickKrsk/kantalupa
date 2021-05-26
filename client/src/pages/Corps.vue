@@ -34,7 +34,7 @@
         </q-item-section>
         </q-item>
       </q-list>     
-      <q-btn color="secondary" label="Предложить идею" />
+      <q-btn color="secondary" label="Создать запрос" @click="addCorp" />
     </div>
     <div class="col-5 q-pa-sm">
       Сферы
@@ -161,6 +161,9 @@ export default {
     this.filtredReq = this.allRequests;
   },
   methods: {   
+    addCorp() {      
+      this.$router.push({ path: '/addCorp' });
+    },
     selectCorp(corp) {
       this.filtredReq = this.allRequests.filter((el) => el.corpId === corp.corpId);   
       console.log(this.filtredReq);         

@@ -9,6 +9,7 @@ const routes = [
       { path: 'corps', component: () => import('pages/Corps.vue') },
       { path: 'startups', component: () => import('pages/Startups.vue') },
       { path: 'addStartup', component: () => import('pages/StartupCard.vue') },
+      { path: 'addCorp', component: () => import('pages/CorpCard.vue') },
     ],
   },
 
