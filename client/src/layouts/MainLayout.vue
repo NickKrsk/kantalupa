@@ -31,11 +31,11 @@
 </template>
 
 <script>
-import Corps from 'components/Corps.vue';
+// import Corps from 'components/Corps.vue';
 
 export default {
   name: 'MainLayout',
-  components: { Corps },
+  // components: { Corps },
   data() {
     return {
       leftDrawerOpen: false,
