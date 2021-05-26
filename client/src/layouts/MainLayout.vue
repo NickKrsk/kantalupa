@@ -3,10 +3,10 @@
     <q-header reveal class="bg-grey-9 text-white">
       <q-toolbar class="shadow-2">
         <q-toolbar-title>
-          Mobilon Connect
+          ITSU
           &nbsp;&nbsp;
           <span>
-            Лид менеджер
+            Connecting people
           </span>
           &nbsp;&nbsp;
           <small>{{account}}</small>
@@ -40,10 +40,11 @@
 </template>
 
 <script>
-// import EssentialLink from 'components/EssentialLink.vue';
+import Corps from 'components/Corps.vue';
+
 export default {
   name: 'MainLayout',
-  // components: {  },
+  components: { Corps },
   data() {
     return {
       leftDrawerOpen: false,
