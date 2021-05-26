@@ -11,10 +11,10 @@
     </div>
     <div class="row">
       <div class="col q-pa-md">
-        <q-btn color="primary" class="full-width" label="Найти инвестиции" />
+        <q-btn color="primary" class="full-width" label="Найти инвестиции" to="corps"/>
       </div>
       <div class="col q-pa-md">
-        <q-btn color="secondary" class="full-width" label="Выбрать стартап" />
+        <q-btn color="secondary" class="full-width" label="Выбрать стартап" to="startups"/>
       </div>
     </div>
 
@@ -36,7 +36,7 @@
           <li>Обсудить идеи</li>
           <li>Найти единомышленников, сотрудников</li>
         </ul>
-        <q-btn color="primary" class="full-width" label="Зарегистрироваться" />
+        <q-btn color="primary" class="full-width" label="Зарегистрироваться" to="register"/>
       </div>
       <div class="col q-pa-md">
         <h4>Для крупного бизнеса</h4>
@@ -45,7 +45,7 @@
           <li>Найти подрядчиков</li>
           <li>Найти инновации</li>
         </ul>
-        <q-btn color="secondary" class="full-width" label="Предложить проблему" />
+        <q-btn color="secondary" class="full-width" label="Предложить проблему" to="register" />
       </div>
       <div class="col q-pa-md">
         <h4>Экосистема</h4>
@@ -54,7 +54,7 @@
           <li>Предложить ресурсы</li>
           <li>Участвовать в развитии</li>
         </ul>
-        <q-btn color="secondary" class="full-width" label="Присоединиться" />
+        <q-btn color="secondary" class="full-width" label="Присоединиться" to="register" />
       </div>
     </div>
     <br><br><br><br>
@@ -70,7 +70,7 @@
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" />
+          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" to="register" />
         </q-card-section>
       </q-card>
 
@@ -83,7 +83,7 @@
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" />
+          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" to="register" />
         </q-card-section>
       </q-card>
 
@@ -96,7 +96,7 @@
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" />
+          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" to="register" />
         </q-card-section>
       </q-card>
 
@@ -109,7 +109,7 @@
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" />
+          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" to="register" />
         </q-card-section>
       </q-card>
     </div>
