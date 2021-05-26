@@ -18,8 +18,8 @@
         as child of QToolbar
       -->
       <q-tabs v-model="tab" shrink>
-        <q-tab name="tab2" label="Настройки" @click="showSettingsDialog"/>
-        <q-tab name="tab3" label="Техподдержка" @click="openSupportURL" />
+        <q-tab name="tab2" label="Логин" @click="showSettingsDialog"/>
+        <q-tab name="tab3" label="Регистрация" @click="openSupportURL" />
         <q-tab name="tab4" :label="username"></q-tab>
       </q-tabs>
       </q-toolbar>
