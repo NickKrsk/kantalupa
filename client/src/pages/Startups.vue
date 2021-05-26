@@ -76,29 +76,7 @@ export default {
       filterText: '', */
       curCorp: {},
       curReq: {},
-      allCorps: [
-        {
-          name: "RusAll",
-          corpId: 1,
-          sphereId: 3,
-        },
-        {
-          name: "RusAll123",
-          corpId: 2,
-          sphereId: 3,
-        },
-      ],      
-      allRequests: [
-        {
-          desc: "Создать станок",
-          corpId: 1,
-        },
-        {
-          desc: "Создать технолгию",
-          corpId: 2,
-        },
-      ],
-
+    
       startups: [
         {
           name: "Стартап1",
