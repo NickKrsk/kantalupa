@@ -1,5 +1,5 @@
 <template>
-  <div class="row">    
+  <div class="row">
     <div class="col-5 q-pa-sm">
       <q-list bordered padding class="rounded-borders text-primary bg-white shadow-2">
         <q-item
@@ -7,11 +7,11 @@
           :key="group.groupId"
           :label="group.groupId"
           clickable
-          v-ripple          
+          v-ripple
           @click="selectGroup(group)"
           active-class="my-menu-link"
-          :active="currentGroup.groupId === group.groupId"          
-        >        
+          :active="currentGroup.groupId === group.groupId"
+        >
           <q-item-section avatar>
             <q-icon :name="group.icon"></q-icon>
           </q-item-section>
@@ -23,24 +23,24 @@
                   {{ group.amountOfUnread }}
             </q-badge>
           </q-item-section>
-        </q-item>        
-        <q-separator color="primary" inset />    
+        </q-item>
+        <q-separator color="primary" inset />
         <q-item
           :key="unparsedGroup.groupId"
           :label="unparsedGroup.groupId"
           clickable
-          v-ripple          
+          v-ripple
           @click="selectGroup(unparsedGroup)"
           active-class="my-menu-link"
-          :active="currentGroup.groupId === unparsedGroup.groupId"          
-        >        
-        
+          :active="currentGroup.groupId === unparsedGroup.groupId"
+        >
+
           <q-item-section avatar>
             <q-icon :name="unparsedGroup.icon"></q-icon>
           </q-item-section>
-        
+
           <q-item-section>{{unparsedGroup.title}}</q-item-section>
-          <q-item-section side>            
+          <q-item-section side>
             <q-badge align="middle" rounded transparent :color="getColor(unparsedGroup.amountOfUnread)" v-if="unparsedGroup.amountOfUnread > 0">
                   {{ unparsedGroup.amountOfUnread }}
             </q-badge>
@@ -64,10 +64,10 @@
         </q-item>
 
         <q-toolbar>
-          <q-input rounded outlined dense 
-            class="full-width" 
-            bg-color="white" 
-            v-model="filterText" 
+          <q-input rounded outlined dense
+            class="full-width"
+            bg-color="white"
+            v-model="filterText"
             placeholder="Фильтр по имени или номеру">
             <template v-slot:append>
               <q-icon v-if="filterText !== ''" name="close" @click="filterText=''" class="cursor-pointer" />
@@ -82,27 +82,27 @@
               v-for="lead in searchedLeads"
               :key="lead.id"
               clickable
-              v-ripple          
+              v-ripple
               @click="selectLead(lead)"
               active-class="my-menu-link"
               :active="currentLead.leadId === lead.leadId"
-            >              
+            >
               <q-item-section avatar>
                 <q-avatar>
-                  <img :src="avatarUrl(lead)" :style="styleAvatar(lead)"/>                         
-                </q-avatar>                                                                         
+                  <img :src="avatarUrl(lead)" :style="styleAvatar(lead)"/>
+                </q-avatar>
               </q-item-section>
-          
+
               <q-item-section>
                 <q-item-label lines="1">
                   {{ lead.name || lead.phone }}
                 </q-item-label>
                 <q-item-label caption lines="1">
-                  {{ lead.company }} 
+                  {{ lead.company }}
                 </q-item-label>
 
                 <!-- <q-item-label caption>
-                  {{ lead.phone }}  
+                  {{ lead.phone }}
                 </q-item-label> -->
 
                 <q-item-label caption>
@@ -112,12 +112,12 @@
 
               <q-item-section side>
                 <template v-if="lead.isWhatsapp === 'present'">
-                  <q-badge align="top" color="teal" rounded  transparent outline style="fontSize:9px">WhatpsApp</q-badge> 
+                  <q-badge align="top" color="teal" rounded  transparent outline style="fontSize:9px">WhatpsApp</q-badge>
                   <br/>
                 </template>
-                <q-badge align="middle" rounded transparent  :color="getColor(lead.amountOfUnread)" v-if="lead.amountOfUnread > 0">{{ lead.amountOfUnread }}</q-badge>                
-              </q-item-section>                                             
-            </q-item>            
+                <q-badge align="middle" rounded transparent  :color="getColor(lead.amountOfUnread)" v-if="lead.amountOfUnread > 0">{{ lead.amountOfUnread }}</q-badge>
+              </q-item-section>
+            </q-item>
           </q-list>
         </q-scroll-area>
 
@@ -131,7 +131,7 @@
 </template>
 
 <script>
-//import LeadAddCard from './LeadAddCard';
+// import LeadAddCard from './LeadAddCard';
 // import { getBaseUrl } from '../utils';
 
 export default {
@@ -144,7 +144,7 @@ export default {
       /* currentGroup: {
         groupId: 'calls',
         title: 'Звонки',
-        icon: 'phone',        
+        icon: 'phone',
       },
       filterText: '', */
     };
@@ -169,10 +169,10 @@ export default {
         this.onLeadAdd(newLead);
       });
     },
-    selectLead(lead) {      
-      this.onLeadSelect(lead);  
+    selectLead(lead) {
+      this.onLeadSelect(lead);
     },
-    selectGroup(group) {     
+    selectGroup(group) {
       this.currentGroup = group;
       this.onGroupSelect(group);
     },
@@ -207,7 +207,7 @@ export default {
     },
     leadsInCurrentGroup() {
       return this.leads.filter((lead) => lead.groupId === this.currentGroup.groupId);
-    },    
+    },
     groupsWithoutUnparsed() {
       return this.groups.filter((group) => group.groupId !== 'unparsed');
     },
