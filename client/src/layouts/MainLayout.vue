@@ -9,7 +9,6 @@
             Connecting people
           </span>
           &nbsp;&nbsp;
-          <small>{{account}}</small>
         </q-toolbar-title>
 
         <q-space />
@@ -18,9 +17,8 @@
         as child of QToolbar
       -->
       <q-tabs v-model="tab" shrink>
-        <q-tab name="tab2" label="Логин" @click="showSettingsDialog"/>
-        <q-tab name="tab3" label="Регистрация" @click="openSupportURL" />
-        <q-tab name="tab4" :label="username"></q-tab>
+        <q-route-tab name="tab2" label="Логин" to="login"></q-route-tab>
+        <q-route-tab name="tab3" label="Регистрация" to="register"></q-route-tab>
       </q-tabs>
       </q-toolbar>
     </q-header>
