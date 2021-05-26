@@ -16,7 +16,7 @@
         notice shrink property since we are placing it
         as child of QToolbar
       -->
-      <q-tabs v-model="tab" shrink>
+      <q-tabs shrink>
         <q-route-tab name="tab2" label="Логин" to="login"></q-route-tab>
         <q-route-tab name="tab3" label="Регистрация" to="register"></q-route-tab>
       </q-tabs>
@@ -24,15 +24,8 @@
     </q-header>
 
     <q-page-container>
-      <q-page>
-        <div class="row q-pa-none">
-          <div class="col-5">
-          <!-- <Groups :groups="groups" /> -->
-          </div>
-          <div class="col-7 q-pa-sm">
-          </div>
-        </div>
-      </q-page>
+      <router-view />
+
     </q-page-container>
   </q-layout>
 </template>
