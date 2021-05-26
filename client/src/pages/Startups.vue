@@ -9,7 +9,8 @@
           :label="item.name"
           clickable 
           v-ripple     
-          @click="selectStartup(item)"        
+          @click="selectStartup(item)"    
+          class="bg-light-blue-2 text-grey-8"     
         >
         <q-item-section>
           <q-item-label>{{item.name}}</q-item-label>          
@@ -27,7 +28,8 @@
           :label="item.name"
           clickable 
           v-ripple     
-          @click="selectCorp(item)"        
+          @click="selectCorp(item)"  
+          class="bg-light-green-2 text-grey-8"       
         >
         <q-item-section>
           <q-item-label>{{item.name}}</q-item-label>          
