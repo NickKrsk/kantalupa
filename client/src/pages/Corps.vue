@@ -45,6 +45,24 @@
           :label="item.name"
           clickable 
           v-ripple     
+          @click="selectStartup(item)"        
+        >
+        <q-item-section>
+          <q-item-label>{{item.name}}</q-item-label>          
+        </q-item-section>
+        </q-item>
+      </q-list>
+    </div>
+
+    <div class="col-5 q-pa-sm">
+      Идеи
+      <q-list bordered separator v-if="filtredIdeas.length > 0">
+        <q-item 
+          v-for="item in filtredIdeas"
+          :key="item.ideaId"
+          :label="item.name"
+          clickable 
+          v-ripple     
           @click="selectCorp(item)"        
         >
         <q-item-section>
@@ -112,13 +130,35 @@ export default {
           startupId: 4,
         },
       ],  
+      ideas: [
+        {
+          name: "Idea1",
+          startupId: 1,
+        },
+        {
+          name: "Idea2",
+          startupId: 1,
+        },
+        {
+          name: "Idea3",
+          startupId: 1,
+        },
+        {
+          name: "Idea4",
+          startupId: 4,
+        },
+      ],  
       filtredReq: [],
+      filtredIdeas: [],
     };
   },
   methods: {   
     selectCorp(corp) {
       this.filtredReq = this.allRequests.filter((el) => el.corpId === corp.corpId);   
       console.log(this.filtredReq);   
+    },
+    selectStartup(startup) {
+      this.filtredIdeas = this.ideas.filter((el) => el.startupId === startup.startupId);       
     },
   },
   computed: {
