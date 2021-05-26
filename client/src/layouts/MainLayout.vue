@@ -3,7 +3,7 @@
     <q-header reveal class="bg-grey-9 text-white">
       <q-toolbar class="shadow-2">
         <q-toolbar-title>
-          ITSU
+          <a href="/">ITSU</a>
           &nbsp;&nbsp;
           <span>
             Connecting people

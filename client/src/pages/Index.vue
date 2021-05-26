@@ -5,7 +5,7 @@
       <q-parallax
         src="https://cdn24.img.ria.ru/images/149555/56/1495555668_19:0:10019:5625_600x0_80_0_0_f3109c9d45d4b1518f2e528c4838daff.jpg"
       >
-        <h1 class="text-white">Место встречи инноваций и бизнеса</h1>
+        <h1 class="text-white transparent">Место встречи инноваций и бизнеса</h1>
       </q-parallax>
 
     </div>
@@ -57,6 +57,75 @@
         <q-btn color="secondary" class="full-width" label="Присоединиться" />
       </div>
     </div>
+    <br><br><br><br>
+    <h3>Ближайшие события</h3>
+    <div class="row items-start q-gutter-md">
+
+      <q-card class="my-card">
+        <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+        <q-card-section>
+          <div class="text-h6">Хакатон КРИТБИ</div>
+          <div class="text-subtitle2">25-26 мая 2021</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" />
+        </q-card-section>
+      </q-card>
+
+      <q-card class="my-card">
+        <img src="https://cdn.quasar.dev/img/parallax1.jpg">
+
+        <q-card-section>
+          <div class="text-h6">Инновации в строительстве / вебинар</div>
+          <div class="text-subtitle2">12 июня 2021</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" />
+        </q-card-section>
+      </q-card>
+
+      <q-card class="my-card">
+        <img src="https://cdn.quasar.dev/img/parallax2.jpg">
+
+        <q-card-section>
+          <div class="text-h6">Инновации в маркетинге</div>
+          <div class="text-subtitle2">23 июня 2021</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" />
+        </q-card-section>
+      </q-card>
+
+      <q-card class="my-card">
+        <img src="https://cdn.quasar.dev/img/chicken-salad.jpg">
+
+        <q-card-section>
+          <div class="text-h6">Бизнес-завтрак</div>
+          <div class="text-subtitle2">2 июля 2021</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          <q-btn color="secondary" class="full-width" label="Зарегистрироваться" />
+        </q-card-section>
+      </q-card>
+    </div>
   </div>
 
 </template>
+
+<style lang="sass" scoped>
+.my-card
+  width: 100%
+  max-width: 300px
+
+.transparent
+   opacity: 0.6
+   margin: 30px
+   border: 1px solid black
+   background-color: #000000 !important
+   filter: alpha(opacity=60)
+</style>
