@@ -1,42 +1,6 @@
 <template>
   <div class="row q-pa-md" style="max-width: 350px">
-    <div class="col-5 q-pa-sm">
-      Корпорации
-      <q-list bordered separator style="max-width: 600px">
-        <q-item 
-          v-for="item in allCorps"
-          :key="item.id"
-          :label="item.name"
-          clickable 
-          v-ripple     
-          @click="selectCorp(item)"        
-        >
-        <q-item-section>
-          <q-item-label>{{item.name}}</q-item-label>          
-        </q-item-section>
-        </q-item>
-      </q-list>
-    </div>
-
-    <div class="col-5 q-pa-sm">
-      Запросы
-      <q-list bordered separator v-if="filtredReq.length > 0">
-        <q-item 
-          v-for="item in filtredReq"
-          :key="item.id"
-          :label="item.desc"
-          clickable 
-          v-ripple     
-          @click="selectReq(item)"        
-        >
-        <q-item-section>
-          <q-item-label>{{item.desc}}</q-item-label>
-        </q-item-section>
-        </q-item>
-      </q-list>     
-    </div>
-
-    <div class="col-5 q-pa-sm">
+    <div class="col-5 q-pa-sm">      
       Стартапы
       <q-list bordered separator>
         <q-item 
@@ -54,7 +18,7 @@
       </q-list>
     </div>
 
-    <div class="col-5 q-pa-sm">
+    <div class="col-6 q-pa-sm">
       Идеи
       <q-list bordered separator v-if="filtredIdeas.length > 0">
         <q-item 
@@ -70,6 +34,7 @@
         </q-item-section>
         </q-item>
       </q-list>
+      <q-btn color="secondary" label="Предложить идею" />
     </div>
 
     <div class="col-5 q-pa-sm">
@@ -87,9 +52,8 @@
           <q-item-label>{{item.name}}</q-item-label>          
         </q-item-section>
         </q-item>
-      </q-list>
-    </div>
-
+      </q-list>      
+    </div>    
   </div>
 </template>
 
