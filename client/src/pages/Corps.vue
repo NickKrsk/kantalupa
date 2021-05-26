@@ -18,7 +18,7 @@
       </q-list>
     </div>
 
-    <div class="col-5 q-pa-sm">
+    <div class="col-6 q-pa-sm">
       Запросы
       <q-list bordered separator v-if="filtredReq.length > 0">
         <q-item 
@@ -34,6 +34,7 @@
         </q-item-section>
         </q-item>
       </q-list>     
+      <q-btn color="secondary" label="Предложить идею" />
     </div>
     <div class="col-5 q-pa-sm">
       Сферы

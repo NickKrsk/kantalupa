@@ -34,7 +34,7 @@
         </q-item-section>
         </q-item>
       </q-list>
-      <q-btn color="secondary" label="Предложить идею" />
+      <q-btn color="secondary" label="Предложить идею" @click="addIdea" />
     </div>
 
     <div class="col-5 q-pa-sm">
@@ -161,6 +161,11 @@ export default {
     this.filtredReq = this.allRequests;
   },
   methods: {   
+    addIdea() {
+      console.log('add idea');
+      this.$router.push({ path: '/login' });
+    },
+
     selectCorp(corp) {
       this.filtredReq = this.allRequests.filter((el) => el.corpId === corp.corpId);   
       console.log(this.filtredReq);         
