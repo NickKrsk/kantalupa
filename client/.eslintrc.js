@@ -23,9 +23,9 @@ module.exports = {
     // Uncomment any of the lines below to choose desired strictness,
     // but leave only one uncommented!
     // See https://eslint.vuejs.org/rules/#available-rules
-    'plugin:vue/essential', // Priority A: Essential (Error Prevention)
+    // 'plugin:vue/essential', // Priority A: Essential (Error Prevention)
     // 'plugin:vue/strongly-recommended', // Priority B: Strongly Recommended (Improving Readability)
-    // 'plugin:vue/recommended', // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)
+    'plugin:vue/recommended', // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)
 
     'airbnb-base'
 
@@ -39,12 +39,12 @@ module.exports = {
   ],
 
   globals: {
-    ga: 'readonly', // Google Analytics
-    cordova: 'readonly',
-    __statics: 'readonly',
-    process: 'readonly',
-    Capacitor: 'readonly',
-    chrome: 'readonly'
+    ga: true, // Google Analytics
+    cordova: true,
+    __statics: true,
+    process: true,
+    Capacitor: true,
+    chrome: true,
   },
 
   // add your custom rules here
@@ -61,9 +61,20 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     'prefer-promise-reject-errors': 'off',
+    "linebreak-style": 0,
+    'max-len': ["error", { "code": 250 }],
 
 
     // allow debugger during development only
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+
+    "linebreak-style": 0,
+
+   'no-underscore-dangle': 'off',
+    'no-param-reassign': 'off',
+    'no-unused-vars': 'off',
+    'vue/no-unused-components': 'off',
+    'quotes': 'off',
+    'no-trailing-spaces': 'off',
   }
 }
