@@ -83,62 +83,39 @@ export default {
           sphereId: 3,
         },
         {
-          name: "RusAll123",
+          name: "БРАЛ",
           corpId: 2,
+          sphereId: 3,
+        },
+        {
+          name: "БСМП",
+          corpId: 3,
+          sphereId: 3,
+        },
+        {
+          name: "Тракторный завод",
+          corpId: 4,
           sphereId: 3,
         },
       ],      
       allRequests: [
         {
-          desc: "Создать станок",
+          desc: "Разработать технологию очистки выбросов",
           corpId: 1,
         },
         {
-          desc: "Создать технолгию",
+          desc: "Разработать ПО для учета кадров",
+          corpId: 1,
+        },
+        {
+          desc: "Разработать комплекс для воздухоочистки",
           corpId: 2,
         },
+        {
+          desc: "Автоматизировать прием заявок",
+          corpId: 3,
+        },
       ],
-
-      startups: [
-        {
-          name: "Стартап1",
-          startupId: 1,
-          sphereId: 3,
-        },
-        {
-          name: "Стартап2",
-          startupId: 2,
-          sphereId: 3,
-        },
-        {
-          name: "Стартап3",
-          startupId: 3,
-          sphereId: 2,
-        },
-        {
-          name: "Стартап4",
-          startupId: 4,
-          sphereId: 2,
-        },
-      ],  
-      ideas: [
-        {
-          name: "Idea1",
-          startupId: 1,
-        },
-        {
-          name: "Idea2",
-          startupId: 1,
-        },
-        {
-          name: "Idea3",
-          startupId: 1,
-        },
-        {
-          name: "Idea4",
-          startupId: 4,
-        },
-      ],  
       spheres: [
         {
           name: "Медицина",
