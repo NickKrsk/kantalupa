@@ -6,32 +6,28 @@
       @reset="onReset"
       class="q-gutter-md"
     >
-      <q-input
-        filled
-        v-model="name"
-        label="Your name *"
-        hint="Name and surname"
-        lazy-rules
-        :rules="[ val => val && val.length > 0 || 'Please type something']"
-      />
+      <q-input filled label="Название *" hint="Отрасль" />
+      <q-input filled label="Отрасль *" hint="Отрасль" />
+      <q-input filled label="Технологии *" hint="Отрасль" />
+      
+      <div class="q-gutter-sm">        
+        Уровень готовности к инвестициям
+        <q-radio v-model="shape" val="line" label="Низкий" />
+        <q-radio v-model="shape" val="rectangle" label="Средний" />
+        <q-radio v-model="shape" val="ellipse" label="Высокий" />
+      </div>
 
-      <q-input
-        filled
-        type="number"
-        v-model="age"
-        label="Your age *"
-        lazy-rules
-        :rules="[
-          val => val !== null && val !== '' || 'Please type your age',
-          val => val > 0 && val < 100 || 'Please type a real age'
-        ]"
-      />
-
-      <q-toggle v-model="accept" label="I accept the license and terms" />
+       <div class="q-pa-md">
+        <q-input
+          v-model="text"
+          filled
+          type="textarea"
+        />
+      </div>
 
       <div>
-        <q-btn label="Submit" type="submit" color="primary"/>
-        <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
+        <q-btn label="Отправить" type="submit" color="primary"/>
+        <q-btn label="Отмена" type="reset" color="primary" flat class="q-ml-sm" />
       </div>
     </q-form>
     </div>
