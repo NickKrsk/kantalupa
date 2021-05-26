@@ -2,7 +2,7 @@
   <div class="row q-pa-md" style="max-width: 350px">
     <div class="col-5 q-pa-sm">
       Корпорации
-      <q-list bordered separator>
+      <q-list bordered separator style="max-width: 600px">
         <q-item 
           v-for="item in allCorps"
           :key="item.id"
@@ -27,25 +27,24 @@
           :label="item.desc"
           clickable 
           v-ripple     
-          @click="selectCorp(group)"        
+          @click="selectReq(item)"        
         >
         <q-item-section>
           <q-item-label>{{item.desc}}</q-item-label>
         </q-item-section>
         </q-item>
-      </q-list>
+      </q-list>     
     </div>
-
     <div class="col-5 q-pa-sm">
-      Стартапы
+      Сферы
       <q-list bordered separator>
         <q-item 
-          v-for="item in startups"
-          :key="item.startupId"
+          v-for="item in spheres"
+          :key="item.sphereId"
           :label="item.name"
           clickable 
           v-ripple     
-          @click="selectStartup(item)"        
+          @click="selectSphere(item)"        
         >
         <q-item-section>
           <q-item-label>{{item.name}}</q-item-label>          
@@ -54,23 +53,6 @@
       </q-list>
     </div>
 
-    <div class="col-5 q-pa-sm">
-      Идеи
-      <q-list bordered separator v-if="filtredIdeas.length > 0">
-        <q-item 
-          v-for="item in filtredIdeas"
-          :key="item.ideaId"
-          :label="item.name"
-          clickable 
-          v-ripple     
-          @click="selectCorp(item)"        
-        >
-        <q-item-section>
-          <q-item-label>{{item.name}}</q-item-label>          
-        </q-item-section>
-        </q-item>
-      </q-list>
-    </div>
   </div>
 </template>
 
@@ -91,14 +73,18 @@ export default {
         icon: 'phone',
       },
       filterText: '', */
+      curCorp: {},
+      curReq: {},
       allCorps: [
         {
           name: "RusAll",
           corpId: 1,
+          sphereId: 3,
         },
         {
           name: "RusAll123",
           corpId: 2,
+          sphereId: 3,
         },
       ],      
       allRequests: [
@@ -116,18 +102,22 @@ export default {
         {
           name: "Стартап1",
           startupId: 1,
+          sphereId: 3,
         },
         {
           name: "Стартап2",
           startupId: 2,
+          sphereId: 3,
         },
         {
           name: "Стартап3",
           startupId: 3,
+          sphereId: 2,
         },
         {
           name: "Стартап4",
           startupId: 4,
+          sphereId: 2,
         },
       ],  
       ideas: [
@@ -148,17 +138,40 @@ export default {
           startupId: 4,
         },
       ],  
+      spheres: [
+        {
+          name: "Медицина",
+          sphereId: 1,
+        },
+        {
+          name: "Транспорт",
+          sphereId: 2,
+        },
+        {
+          name: "Металлургия",
+          sphereId: 3,
+        },
+      ],
       filtredReq: [],
       filtredIdeas: [],
     };
   },
+  mounted() {
+    this.filtredReq = this.allRequests;
+  },
   methods: {   
     selectCorp(corp) {
       this.filtredReq = this.allRequests.filter((el) => el.corpId === corp.corpId);   
-      console.log(this.filtredReq);   
+      console.log(this.filtredReq);         
+    },
+    selectReq(req) {
+      this.curReq = req;
     },
     selectStartup(startup) {
       this.filtredIdeas = this.ideas.filter((el) => el.startupId === startup.startupId);       
+    },
+    selectSphere(sphere) {
+      // this.filtredIdeas = this.ideas.filter((el) => el.startupId === startup.startupId);       
     },
   },
   computed: {

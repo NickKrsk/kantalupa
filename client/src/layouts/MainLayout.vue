@@ -18,7 +18,7 @@
       -->
       <q-tabs shrink>
         <q-route-tab name="tab1" label="Стартапы" to="startups"></q-route-tab>
-        <q-route-tab name="tab1" label="Корпорации" to="corps"></q-route-tab>
+        <q-route-tab name="tab1" label="Корпорации" to="corps"></q-route-tab>        
         <q-route-tab name="tab2" label="Логин" to="login"></q-route-tab>
         <q-route-tab name="tab3" label="Регистрация" to="register"></q-route-tab>
       </q-tabs>
