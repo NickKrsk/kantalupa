@@ -1,5 +1,5 @@
 <template>
-  <div class="row q-pa-md" style="max-width: 350px">
+  <div class="row q-pa-md" style="max-width: 800px">
     <div class="col-5 q-pa-sm">      
       Стартапы
       <q-list bordered separator>

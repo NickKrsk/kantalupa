@@ -1,5 +1,5 @@
 <template>
-  <div class="row q-pa-md" style="max-width: 350px">
+  <div class="row q-pa-md" style="max-width: 1200px">
     <div class="col-5 q-pa-sm">
       Корпорации
       <q-list bordered separator style="max-width: 600px">
@@ -9,7 +9,8 @@
           :label="item.name"
           clickable 
           v-ripple     
-          @click="selectCorp(item)"        
+          @click="selectCorp(item)"  
+          class="bg-teal-1 text-grey-8"      
         >
         <q-item-section>
           <q-item-label>{{item.name}}</q-item-label>          
